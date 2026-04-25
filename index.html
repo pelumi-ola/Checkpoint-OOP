@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Shopping Cart</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">shop<span>.</span>oop</div>
+        <div class="cart-badge">
+          🛒 Cart
+          <span class="badge-count" id="badge-count">0</span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- Products -->
+        <section>
+          <p class="section-label">Products</p>
+          <div class="products-grid" id="products-grid">
+            <!-- rendered by JS -->
+          </div>
+        </section>
+
+        <!-- Cart -->
+        <aside>
+          <p class="section-label">Your Cart</p>
+          <div class="cart-panel">
+            <div class="cart-header">
+              <span class="cart-title">Cart Summary</span>
+              <button class="btn-clear" onclick="clearCart()">Clear all</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+              <div class="empty-state">
+                <span class="empty-icon">🛍️</span>
+                <p>Your cart is empty.<br />Add something!</p>
+              </div>
+            </div>
+            <div class="cart-footer">
+              <div class="totals-row">
+                <span class="label">Items</span>
+                <span id="total-items">0</span>
+              </div>
+              <div class="grand-total">
+                <span class="grand-label">Total</span>
+                <span class="grand-amount" id="grand-total">$0.00</span>
+              </div>
+              <button
+                class="btn-checkout"
+                id="checkout-btn"
+                disabled
+                onclick="checkout()"
+              >
+                Checkout
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Console output -->
+      <div class="console-section">
+        <p class="section-label">JavaScript Console</p>
+        <div class="console-box">
+          <div class="console-top">
+            <div class="console-dot">
+              <div class="dot r"></div>
+              <div class="dot y"></div>
+              <div class="dot g"></div>
+            </div>
+            <span class="console-label">OOP Cart — Live Log</span>
+          </div>
+          <div class="console-log" id="console-log"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
